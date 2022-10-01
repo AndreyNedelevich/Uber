@@ -1,0 +1,232 @@
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+/* СОЗДАНИЕ ПЕРЕМЕННЫХ */
+:root {
+  --color-first: #212121;
+  --color-second: #5dcaeb;
+  --color-third: #58a4eb;
+  --color-first-darker: #048680;
+  --color-second-darker: #076785;
+  --color-third-darker: #083c6d;
+  --color-first-opacity: #5dcaeb3a;
+  --color-second-opacity: #5eeee731;
+  --color-third-opacity: #58a4eb2d;
+  --gradient-first: linear-gradient(to top left, #048680, #5eeee7);
+  --gradient-second: linear-gradient(to top left, #03534f, #5eeee7);
+}
+/* Применяем переменные в CSS */
+.bec {
+  background-color: var(--color-first);
+}
+
+/* ДЛЯ всего HTML документа применяем симейство шрифтов Roboto */
+
+header {
+  position: relative;
+  height: 50px; /* * */
+}
+nav {
+  position: fixed; /* Создаем прилпающее меню */
+  width: 100%; /*  */
+  height: 50px;
+  /* Применяем переменные в CSS */
+  background-color: #212121;
+  z-index: 2; /*  */
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  /* Bcgjkmpetv flex и свойство justify-content чьл бы выровнять по горизонтальной оси */
+  padding: 13px 70px;
+  /* При указании padding в двух значениях перве это свергу и снизу а второе это слева и справа. */
+  margin: 0;
+  list-style-type: none;
+  /*Используем list-style-type в котором прописываеться свойттва указателей списка (точки) указываем none что бы убрать их */
+}
+
+.menu .menu_link {
+  font-size: 15px;
+  font-weight: 300;
+  color: #fff;
+}
+.menu .menu_item {
+  border-right: 2px dotted black;
+  /* При помощи border-right: 2px dotted; задаем правую границу в ширину 2px и точечный формат и цвет */
+  padding-right: 28px;
+}
+.subheader {
+  position: absolute;
+  top: 50px; /*Для закрепоение навигационного меню*/
+  width: 100%;
+  height: 84px;
+  background-color: rgba(0, 0, 0, 0.6);
+  /* Для того что бы установить прозрачность не всего блока с контентом мы устанавливаем альфа канал кодироку с rgba тоисть *** В формате цыета с буквой rgba мы также четвертым параметром можем формировать прозрачность цвета. 
+  Если установим opacity для всего блока то эта прозрачность примениться и для контента */
+}
+.subheader .subheader_log {
+  display: block;
+  /* Ссылка изначально это блочный элемент для строчных элементов марджины не работают поэтому мы указываем  display: block; */
+  margin-top: 16px;
+  max-width: 100%;
+  /* Если когда то вместо логотипа поместиться другое изображения то новое изображение будет занимать не болеет 100% от колонки */
+}
+.subheader .subheader_official {
+  margin-top: 6px;
+  opacity: 0.5;
+  font-size: 13px;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+}
+.subheader_call {
+  margin-top: 19px;
+  font-size: 12px;
+  font-weight: 300;
+  color: #fff;
+  text-align: right;
+}
+
+.subheader_phone {
+  display: block;
+  margin-top: 8px;
+  font-size: 22px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: right;
+  color: #fff;
+  line-height: 12px;
+  /* Высота между строками */
+}
+
+.subheader_btn {
+  margin-top: 19px;
+  width: 172px;
+  height: 46px;
+  box-shadow: inset 0px -3px 0 0 rgba(0, 0, 0, 0.12);
+  border: none;
+  border-radius: 4px;
+  background-image: linear-gradient(to top, #1eacc7, #4ce2ff);
+  text-shadow: 0.7px 0.7px 0 rgba(0, 0, 0, 0.21);
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.promo {
+  min-height: 800px;
+  background: url(../img/mainFoto.jpg) center center/cover no-repeat;
+  /*  В свойствах center center мы указываем что картинка будет стоять по центру по оси x и y и свойство caver - картинка будет растягиваться на всю ширину.no-repeat эту картинку не нужно повторять если вдруг ее не хватает.*/
+
+  padding: 150px 0 135px 0;
+}
+
+.promo_header {
+  font-weight: 700;
+  font-size: 60px;
+  text-transform: uppercase;
+  color: #ffffff;
+  line-height: 60px;
+  /* Выставляем line-height в размер шрифта что бы заголовки схлопнулись(растояние между строками было минимальным) */
+  margin: 0;
+  text-align: center;
+}
+.promo_subheader {
+  font-weight: 700;
+  font-size: 36px;
+  text-transform: uppercase;
+  color: #ffffff;
+  line-height: 36px;
+  margin: 0;
+  margin-top: 22px;
+  text-align: center;
+}
+
+.promo_descr {
+  margin-top: 23px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+  color: #fff;
+}
+
+.promo_btn {
+  display: block;
+  /*Кнопка по факту это inline block элемент что поставить ее по центру указываем  display: block; что бы можно было отцентровать кнопку по центру при помощи margin   */
+  margin: 118px auto 0 auto;
+  width: 259px;
+  height: 63px;
+  /* Ширина и высота кнопки */
+  box-shadow: inset 0px -4px 0 0 rgba(0, 0, 0, 0.12);
+  border: none;
+  border-radius: 5px;
+  background-image: linear-gradient(to top, #1eacc7, #4ce2ff);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 68px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.reasons {
+  padding: 71px 0 65px 0;
+}
+
+.label {
+  margin: 0 auto;
+  height: 24px;
+  width: 112px;
+  padding: 5px 12px;
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.title {
+  margin-bottom: 0;
+  margin-top: 38px;
+  color: #222222;
+  font-size: 38px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.reasons_block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 35px;
+}
+.reasons_round {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 26px;
+  width: 113px;
+  height: 113px;
+  background-color: #1eacc7;
+  border-radius: 100%;
+}
+.reasons_descr {
+  width: 343px;
+}
+
+.reasons_subtitle {
+  line-height: 21px;
+  color: #1eacc7;
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.reasons_text {
+  color: #202020;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 21px;
+}
